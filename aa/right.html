@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>２つのフレームを同時にスクロールさせる</title>
+
+</head>
+<body onScroll="scrl()">
+　右側のフレームです。<br><br>
+
+<h1>自動スクロール</h1>
+<br></br><br></br><div>↓</div>
+<br></br><br></br><div>↓</div>
+<br></br><br></br><div>↓</div>
+<br></br><br></br><div>↓</div>
+<br></br><br></br><div>↓</div>
+<h1>終了</h1>
+
+<img src="image.jpg">
+
+
+<script language="JavaScript"><!--
+    function scrl()
+    {
+        y = document.body.scrollTop;
+        parent.leftFrame.newXY(y);
+    }
+    function newXY(n)
+    {
+        x = parent.right.document.body.scrollLeft;
+        scrollTo(x,n);
+    }
+    // --></script>
+</body>
+</html>
